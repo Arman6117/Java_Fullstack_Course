@@ -1,4 +1,4 @@
-package Basics;
+package Operators;
 
 import java.util.Scanner;
 
