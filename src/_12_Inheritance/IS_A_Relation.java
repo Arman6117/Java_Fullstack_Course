@@ -6,8 +6,9 @@ public class IS_A_Relation {
         //IS_A relation
         CC obj = new CC();
         obj.t1();
-        obj.t2();
+//        obj.t2();
         obj.t3();
+        
 
     }
 }
@@ -27,9 +28,10 @@ class BB extends AA {
     public BB(){
         a = 20;
     }
-    void t2(){
+    static  void t2(){
         System.out.println(a);
     }
+
 }
 class CC extends BB {
     int a;
