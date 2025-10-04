@@ -1,0 +1,157 @@
+package com.List;
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
+
+public class VectorTest {
+
+	public static void main(String[] args) {
+		//List li=new Vector();
+		
+		Vector<Integer> v1=new Vector<>();
+//		System.out.println(v1.capacity());
+		
+		// Inserting Elements
+		v1.add(10);
+		v1.add(11);
+		v1.add(11);
+		v1.add(12);
+		v1.add(13);
+		v1.add(14);
+		v1.add(15);
+		System.out.println(v1);
+		v1.add(0, 101);
+		System.out.println(v1);	
+		
+		
+		Vector<Integer> v2=new Vector<>();
+		
+		v2.add(1001);
+		v2.add(1002);
+		v2.add(1003);
+		
+//		for(int i=0; i<v2.size(); i++)
+//		{
+//			v1.add(v2.get(i));
+//		}
+		//or
+		//v1.addAll(v2);
+		
+		
+		System.out.println(v1);
+		
+//		System.out.println(v1.capacity());
+		System.out.println(v1.size());
+		
+		//Rertiving Element
+		System.out.println(v1.get(2));
+		
+		//Update/Modify Element
+		System.out.println(v1.set(1, 123));
+		System.out.println(v1);
+		
+		System.out.println(v1.remove(0));
+		System.out.println(v1);
+		
+		
+		Vector v3=new Vector<>();
+		
+		v3.add(101);
+		v3.add(102);
+		v3.add(103);
+		v3.add(104);
+		v3.add(105);
+		v3.add(106);
+		v3.add(107);
+		v3.add(108);
+		v3.add(109);
+		v3.add(110);
+		
+		System.out.println(v3);
+		int mid=v3.size() /2;
+		System.out.println(mid);
+		
+		List sub1=v3.subList(0, 5);
+		List sub2=v3.subList(5, 10);
+		
+		System.out.println(sub1);
+		System.out.println(sub2);
+		
+		
+		
+	}
+
+}
+
+/*
+javap java.util.Vector
+Compiled from "Vector.java"
+public class java.util.Vector<E> extends java.util.AbstractList<E> implements java.util.List<E>, java.util.RandomAccess, java.lang.Cloneable, java.io.Serializable {
+  protected java.lang.Object[] elementData;
+  protected int elementCount;
+  protected int capacityIncrement;
+  public java.util.Vector(int, int);
+  public java.util.Vector(int);
+  public java.util.Vector();
+  public java.util.Vector(java.util.Collection<? extends E>);
+  public synchronized void copyInto(java.lang.Object[]);
+  public synchronized void trimToSize();
+  public synchronized void ensureCapacity(int);
+  public synchronized void setSize(int);
+  public synchronized int capacity();
+  public synchronized int size();
+  public synchronized boolean isEmpty();
+  public java.util.Enumeration<E> elements();
+  public boolean contains(java.lang.Object);
+  public int indexOf(java.lang.Object);
+  public synchronized int indexOf(java.lang.Object, int);
+  public synchronized int lastIndexOf(java.lang.Object);
+  public synchronized int lastIndexOf(java.lang.Object, int);
+  public synchronized E elementAt(int);
+  public synchronized E firstElement();
+  public synchronized E lastElement();
+  public synchronized void setElementAt(E, int);
+  public synchronized void removeElementAt(int);
+  public synchronized void insertElementAt(E, int);
+  public synchronized void addElement(E);
+  public synchronized boolean removeElement(java.lang.Object);
+  public synchronized void removeAllElements();
+  public synchronized java.lang.Object clone();
+  public synchronized java.lang.Object[] toArray();
+  public synchronized <T> T[] toArray(T[]);
+  E elementData(int);
+  static <E> E elementAt(java.lang.Object[], int);
+  public synchronized E get(int);
+  public synchronized E set(int, E);
+  public synchronized boolean add(E);
+  public boolean remove(java.lang.Object);
+  public void add(int, E);
+  public synchronized E remove(int);
+  public void clear();
+  public synchronized boolean containsAll(java.util.Collection<?>);
+  public boolean addAll(java.util.Collection<? extends E>);
+  public boolean removeAll(java.util.Collection<?>);
+  public boolean retainAll(java.util.Collection<?>);
+  public boolean removeIf(java.util.function.Predicate<? super E>);
+  public synchronized boolean addAll(int, java.util.Collection<? extends E>);
+  public synchronized boolean equals(java.lang.Object);
+  public synchronized int hashCode();
+  public synchronized java.lang.String toString();
+  public synchronized java.util.List<E> subList(int, int);
+  protected synchronized void removeRange(int, int);
+  public synchronized java.util.ListIterator<E> listIterator(int);
+  public synchronized java.util.ListIterator<E> listIterator();
+  public synchronized java.util.Iterator<E> iterator();
+  public synchronized void forEach(java.util.function.Consumer<? super E>);
+  public synchronized void replaceAll(java.util.function.UnaryOperator<E>);
+  public synchronized void sort(java.util.Comparator<? super E>);
+  public java.util.Spliterator<E> spliterator();
+  void checkInvariants();
+} 
+*/
+
+//
