@@ -1,35 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Dynamic web app</title>
-<style>
-	body {
-	background-color:aqua; 
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-<center>
- <marquee> 	<h1>Welcome to JEE Web App</h1></marquee>
- <form action="LoginAction">
-	<table border="1">
-	<tr>
-		<th>UserName: </th>
-		<td> 
-		<input type="text" name="un"> 
-		</td>
-	</tr>
-	<tr>
-		<th>Password: </th>
-		<td> <input type="password" name="pa"> </td>
-	</tr>
-	<tr>
-		<td colspan="2" style="text-align: center;"> <input type="submit" value="Login"> </td>
-	</tr>
-	</table>
-	</form>
-</center>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="register.html">Sign up</a></p>
+    </form>
+  </div>
 </body>
 </html>
