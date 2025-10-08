@@ -41,7 +41,7 @@
 	if(res > 0) {
 		response.sendRedirect("Login.jsp?msg=valid");
 	} else {
-		response.sendRedirect("Home.jsp?msg=invalid");
+		response.sendRedirect("Registration.jsp?msg=invalid");
 	}
 	
 	} catch(Exception e) {

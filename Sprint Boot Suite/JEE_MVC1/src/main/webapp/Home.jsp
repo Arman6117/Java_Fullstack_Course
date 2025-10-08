@@ -1,54 +1,71 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Welcome</title>
-<link rel="stylesheet" href="./CSS/index.css" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to right, #74ebd5, #acb6e5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.4);
+	padding: 40px 60px;
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 30px;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+	background: white;
+	color: #2575fc;
+	border: none;
+	padding: 12px 25px;
+	margin: 10px;
+	border-radius: 30px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background: #2575fc;
+	color: white;
+	transform: translateY(-2px);
+}
+</style>
 </head>
 <body>
-	<div class="login-container">
-		<h2>Register</h2>
-		<form action="SignupAction.jsp" method="post">
-			<label for="uid">UID</label> <input type="text" id="uid" name="uid"
-				placeholder="Enter Uid" required /> <label for="fullname">Full
-				name</label> <input type="text" id="fullname" name="fullname"
-				placeholder="Enter Your Fullname" required /> <label for="email">Email</label>
-			<input type="email" id="email" name="email"
-				placeholder="Enter your email" required /> <label for="username">Username</label>
-			<input type="text" id="username" name="username"
-				placeholder="Choose a username" required /> <label for="password">Password</label>
-			<input type="password" id="password" name="password"
-				placeholder="Create a password" required /> <label
-				for="confirm-password">Confirm Password</label> <input
-				type="password" id="confirm-password" name="confirm-password"
-				placeholder="Re-enter password" required />
-
-			<button type="submit">Register</button>
-			<p>
-				Already have an account? <a href="Login.jsp">Login</a>
-			</p>
-		</form>
-
-		<%
-		String msg = request.getParameter("msg");
-
-		if ("valid".equals(msg)) {
-		%>
-		<h1 style="color: green">Registered Successfully</h1>
-		<%
-		}
-
-		if ("invalid".equals(msg)) {
-		%>
-	
-		<h4 style="color: red">Registration failed</h1>
-		<%
-		}
-		%>
-
-
+	<div class="container">
+		<h1>Welcome to Our Website</h1>
+		<div>
+			<button class="btn" onclick="location.href='Login.jsp'">Sign
+				In</button>
+			<button class="btn" onclick="location.href='Registration.jsp'">Sign
+				Up</button>
+		</div>
 	</div>
 </body>
 </html>
