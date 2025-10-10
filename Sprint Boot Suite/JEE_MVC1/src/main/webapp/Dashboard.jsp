@@ -48,20 +48,21 @@ body {
 
 .delete-btn {
 	background-color: #f44336;
-	color: white;
-	
-	padding: 10px 20px;
+	color: white; padding : 10px 20px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	margin-top: 20px;
 	margin-left: 10px;
+	padding: 10px 20px;
 }
-.link{
-    text-decoration: none;
-    color: white;
+
+.link {
+	text-decoration: none;
+	color: white;
 }
+
 h1 {
 	font-size: 4rem;
 	margin-bottom: 30px;
@@ -110,11 +111,15 @@ h2 {
 				<%=d2.getPassword()%></h2>
 
 			<button class="edit-btn">
-				<a  class="link" href="EditInfo.jsp?uid=<%=d2.getUid()%>"> Edit Info </a>
-				</button>
-				<button class="delete-btn">
-					<a class="link" href="EditInfo.jsp?uid=<%=d2.getUid()%>"> Delete </a>
-				</button>
+				<a class="link" href="EditInfo.jsp?uid=<%=d2.getUid()%>"> Edit
+					Info </a>
+			</button>
+			<button class="delete-btn">
+				<a class="link"
+					href="Dashboard.jsp?action=delete&uid=<%=d2.getUid()%>"
+					onclick="return confirm('Are you sure you want to delete this user?');">
+					 Delete </a>
+			</button>
 		</div>
 	</div>
 	<%
